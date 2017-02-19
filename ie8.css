@@ -1,0 +1,32 @@
+/* Section Slider */
+
+#one {    
+    position: relative;
+}
+
+.text_slide {
+    padding-top: 0px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(119,119,119);
+}
+
+/* suppression des menus et des logos des services */
+.services_logo {
+    border: none;
+}
+.bulle_bleue, ul {
+    display: none;
+}
+
+.projets_album img {
+    max-width: 400px;
+    display: inline-block;
+}
+
+.projets_album {
+    text-align: center;
+}

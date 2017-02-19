@@ -1,0 +1,70 @@
+/* Remplacement du positionnement flexbox non reconnu IE<10 */
+
+li, #logo_webagency, figure, .services_logo, .services_text {
+    display: inline-block;
+}
+
+header nav {
+    float: right;
+}
+
+header nav, #logo_webagency {
+    padding: 30px;
+}
+
+/* Suppression slider */
+
+#two, #slider nav {
+    display: none;
+}
+
+.header_slide {
+    height: 0;
+}
+
+.text_slide {
+    padding-top: 80px;
+}
+
+/* Section services */
+
+.services_logo p {
+    text-align: center;
+}
+
+.services_logo {
+    margin-top: 30px;
+    vertical-align:top;
+}
+
+#services_body {
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+}
+
+.services_description {
+    text-align: left;
+}
+
+h3:hover {
+    padding-left: 0;
+}
+
+/* Section projets */
+
+#projets nav {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+figcaption > div > p {
+    text-align: center;
+}
+
+/* Section contact */
+
+form {
+    background-color: rgb(255,255,255); /* rgba non reconnu */
+}

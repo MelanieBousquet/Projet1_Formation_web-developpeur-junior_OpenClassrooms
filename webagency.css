@@ -1,0 +1,628 @@
+body {
+    
+    font-family: 'Roboto', sans-serif;
+    color: rgb(119,119,119);
+    margin: 0;
+    font-size: 16px;
+    width: 100%;
+}
+
+h1, h2 {
+    font-size: 250%;
+    font-weight: 900;
+}
+
+h2, h3 {
+    color: rgb(39,39,39);
+    transition: all 0.8s ease;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ HEADER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Menu Fixe qui suit la navigation */
+
+header {
+    position: fixed;
+    z-index: 4;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    
+}
+
+/* Titre section visible lors de la navigation par le menu */
+#services, #projets { 
+    padding-top: 120px;
+}
+#services h2, #projets h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Mise en place du menu */
+
+header ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header a {
+    padding: 0px 10px;
+    text-decoration: none;
+    color: rgb(80,80,80);
+}
+
+/* Pas de cadre gris sur IE sur img cliquable*/
+a img {
+    border: 0; 
+}
+
+/* Logo navigation sur mobile non visible version desktop */
+#nav, label {
+	  display: none;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SECTION SLIDER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#slider, .slide {
+    height: 650px; /* Taille comprenant la slide + l'en-tête qui passe sous le menu */
+    color: white;
+    font-weight: bold;
+    overflow: hidden;
+    width: 100%;
+}
+
+#slider {
+    position: relative;
+}
+
+/* Slide visible sous le menu lors du clic sur les ancres */
+.header_slide {
+    height: 100px;
+}
+
+.body_slide {
+    position: relative; /* Positionnement des liens de navigation en absolute */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 550px;
+}
+
+#one .body_slide {
+    background: url('images/slider/bg1.jpg') no-repeat center;
+    background-size: cover;
+}
+
+#two .body_slide {
+    background: url('images/slider/bg2.jpg') no-repeat center;
+    background-size: cover;
+}
+
+/* Effet transition au changement de slide */
+#one {
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#two {
+    opacity: 0;
+    transition: all 1.5s ease-in-out;
+}
+#two:target {
+    opacity: 1;
+}
+
+/* Mise en place des liens de navigation du slider */
+.slide nav a {
+    z-index: 2;
+    background: rgba(0,0,0,.4);
+    color: #fff;
+    text-decoration: none;
+    height: 70px;
+    width: 70px;
+    border-radius: 35px;
+    position: absolute;
+    top: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.slide nav a:hover {
+    background: rgba(0,0,0,.8);
+}
+.prev {
+    left: -35px;
+}
+.next {
+    right: -35px;
+}
+.prev i {
+    padding-left: 20px;
+}
+.next i {
+    padding-right: 20px;
+}
+
+/* Texte du slider */
+.text_slide {
+    margin: 10%;
+    max-width: 700px;
+}
+.text_slide h1 span {
+    color: rgb(92,173,211);
+}
+.text_slide p {
+     margin-bottom: 40px;
+}
+
+/* Effet bouton cliquable */
+.text_slide a { 
+    color: white;
+    background-color: rgb(92,173,211);
+    padding: 10px 15px;
+    border-radius: 3px;
+    border-bottom: 3px solid rgb(68,148,187);
+    text-decoration: none;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SECTION SERVICES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#services_body {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#conteneur_services {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+
+#services img {
+    margin: 0 auto;
+}
+
+.services_description {
+    display: flex;
+}
+
+.services_text {
+    margin-left : 20px;
+    max-width: 600px; /* Pour "forcer" retour à la ligne sur IE */
+}
+
+/* Mise en place du logo rond avec bulle bleue */
+
+.services_logo {
+    height: 60px;
+    width: 60px;
+    min-width: 60px; /* Eviter aplatissement face au texte */
+    border-radius: 30px;
+    border: 1px solid rgb(217,217,217);
+    display: flex;
+    align-self: center; /* Centrer le logo fontawesome */
+    padding-top: 5px; /* Centrer le logo fontawesome */
+    justify-content: center;
+    position: relative; /* Positionnement bulle_bleue */
+    color: rgb(92,173,211);
+    transition: all 0.5s ease;
+}
+
+.bulle_bleue {
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+    background-color: rgb(92,173,211);
+    position: absolute;
+    top: 25px;
+    right: -5px;
+}
+
+
+/*     STYLES COMMUNS SECTION SERVICES ET SECTION PROJETS     */
+
+/* En-tête des sections */
+.section_header {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+/* Séparateur sous titre */
+hr {
+    width: 200px;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(217,217,217,0), rgba(217,217,217,1), rgba(217,217,217,0));
+    margin-bottom: 30px;
+}
+/* Mise en place bulle bleue au centre de la ligne séparatrice */
+hr::after {
+    content: '•';
+    color: rgb(92,173,211);
+    font-size: 50px;
+    padding: 0px 5px;
+    margin: 0;
+    position: relative;
+    top: -28px;
+    background-color: white;
+}
+#projets hr::after {
+    background-color: rgb(245,245,245);
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SECTION PROJETS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#projets {
+    background-color: rgb(245,245,245);
+    padding-bottom: 50px;
+}
+
+/* Mise en place du menu interne aux projets */
+
+#projets ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    position: relative; /* Positionnement triangle sous l'élément à la sélection */
+    padding: 0;
+    margin: 50px 0;
+} 
+
+#projets li {
+    padding: 8px 10px;
+    background-color: rgb(229,229,229);
+    transition: background-color 1s, color 1s;
+}
+
+ #projets .select, #projets li:hover  {
+    background-color: rgb(92,173,211);
+    color: white;
+    font-weight: 300;
+    border-bottom: 4px solid rgb(70,140,173);
+    position: relative;
+    cursor: pointer;
+}
+
+/* Mise en place de l'album et de l'apparition de la légende au survol, ainsi que du masque en fonction des projets choisis */
+
+.projets_album {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 85%;
+    margin: 0 auto;
+}
+
+figure img {
+    width: 100%;
+}
+
+figure { 
+    position: relative; /* Positionnement de la légende au survol */
+    overflow: hidden; 
+    height: 175px;
+    width: 260px;
+    margin: 15px;
+    background-color: rgba(0,0,0,0);
+}
+
+/* Masque */
+.inactive {
+    position: absolute;
+    background-color: rgba(0,0,0,.8);
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    bottom: 0;
+}
+.inactive div {
+    display: none;
+}
+
+/* Légende au survol */ 
+figcaption { 
+    position: absolute; 
+    background: rgba(0,0,0,0.4); 
+    color: white; 
+    width: 100%;
+    padding: 0 10px;;
+    opacity: 0;
+    bottom: -30%; 
+    left: 0;
+    transition: all 0.6s ease;
+}
+figure:hover figcaption {
+    opacity: 1;
+    bottom: 0;
+}
+/* Bulle bleue avec logo oeil*/
+figcaption div {
+    width: 35px;
+    height: 35px;
+    background-color: rgb(69,144,177);
+    border-radius: 17.5px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 70%;
+    top: -20px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SECTION CONTACT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#contact {
+    position: relative;
+}
+
+.google_maps, #conteneur_contact {
+    width: 100%;
+    position: absolute;
+    height: 600px;
+}
+
+#conteneur_contact {
+    background-color: rgba(92,173,211, .4);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+form {
+    background-color: rgba(255,255,255, .8);
+    width: 300px;
+    height: 70%;
+    margin: 40px 150px;
+    padding: 20px; padding-right: 30px;
+    border-radius: 3px;
+}
+
+form h2 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 180%;
+}
+
+input {
+    width: 100%;
+    height: 25px;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    padding-left: 10px; 
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    border-radius: 3px;
+    padding-left: 10px;
+}
+
+.bouton {
+    color: white;
+    background-color: rgb(92,173,211); 
+    border-bottom: 3px solid rgb(70,140,173);
+    border-radius: 3px;
+    padding: 5px 15px;
+    text-decoration: none;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Responsive design ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Sur desktop, effets grossissement titres et logos */
+@media all and (min-width: 1024px) {
+    
+    #projets h2:hover, #services h2:hover {
+        font-size: 270%;
+    }
+    h3:hover {
+        font-weight: 900;
+        font-size: 130%;
+        padding-left: 20px;
+    }    
+    .services_logo:hover {
+        font-size: 1.4em;
+        height: 70px;
+        width: 70px;
+        min-width: 70px;
+        border-radius: 35px;
+        padding-top: 0; padding-bottom: 5px;
+    }
+}
+
+/* Sur tablettes et smartphones */
+@media all and (max-width: 1024px) {    
+    h1, h2 {
+        font-size: 200%; /* Adaptation tailles des titres, plus petits*/
+    }    
+    form {
+        margin: 0;
+        width: 80%; /* Adaptation formulaire de contact, prend toute la largeur */
+    }    
+    #services_body {
+        flex-wrap: wrap; /* Présentation des services en colonnes */
+    }    
+    #conteneur_contact {
+        justify-content: center;
+    }    
+    .body_slide {
+        height: 450px; /* Slider plus petit */
+    }    
+    #slider, .slide {
+        height: 550px; /* Slider plus petit */
+    }
+    .text_slide {
+        max-width: 450px;
+    }
+ 
+}
+
+/* Sur Desktop et tablettes format paysage, border bleue sur l'élément actif ou survolé du menu principal + texte slider */ 
+@media all and (min-width: 780px) {    
+    header nav a:hover, header nav .active {
+        border-top: 3px solid rgb(92,173,211);
+        padding-top: 38px;
+    }
+  
+}
+
+/* Sur smartphones et tablettes format portrait, mis en place du menu hamburger */
+@media screen and (max-width: 780px) {
+    
+    header {
+        justify-content: space-between;
+    }
+    
+	nav ul {
+        display: none; /* Suppression du menu complet */
+	}
+    /* Mise en place du logo du menu hamburger */ 
+	label { /* Le carré */
+  		display: block;
+  		background-image: linear-gradient(rgb(31,178,177),rgb(52,158,196));
+        width: 40px;
+  		height: 40px;
+        border-bottom: solid 4px rgb(29,139,179);
+        border-radius: 15px;
+        margin-right: 10px;
+        cursor: pointer;
+        padding-top: 5px;
+	}
+    label:after{ /* Mise en place des 3 traits*/
+        content:'';
+        display: block;
+        width: 20px; /* 1er trait */
+        height: 2px; /* 1er trait */
+        background: white;
+        margin-top: 10px; margin-left: 10px;
+        box-shadow: 0px 7px 0px white, 0px 14px 0px white; /* les 2 traits suivants */
+    }
+    /* Apparition du menu hamburger lors du clic */
+	[type="checkbox"]:checked ~ ul {
+        display: block;
+  		z-index: 5;
+  		position: absolute;
+        top : -15px;
+        right: 60px;
+        left: 0px;
+        min-height: 100px;
+        background-image: linear-gradient(rgb(31,178,177),rgb(52,158,196));
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+	}
+	header nav ul li {
+  		width: 100%;
+  		text-align: left;
+        margin-left: 0px;
+        padding: 2px;
+        text-transform: uppercase;
+        font-size: 90%;
+    }
+    header nav ul li a {
+        color: white;
+    }
+}
+
+/* Sur Desktop et tablettes format paysage ou portraits, adaptation menu interne section projets */
+@media all and (min-width: 480px) {
+    #projets li:first-of-type {
+        border-radius: 5px 0 0 5px;
+    }
+    #projets li:last-of-type {
+        border-radius: 0 5px 5px 0;
+    }
+   
+    /* Mise en place du triangle bleu au survol du menu interne aux projets */
+    #projets li:hover::before, #projets .select::before {
+        content: '\0025BE';
+        color: rgb(70,140,173);
+        position: absolute;
+        top: 13px;
+        left: 25%;
+        font-weight: 900;
+        font-size: 45px;
+    }
+}
+
+/* Sur smartphones */
+@media all and (max-width: 480px) {
+    
+    /* Adaptation taille polices */
+    h1, h2 {
+        font-size: 170%;
+    }
+     .text_slide {
+        font-size: 90%;
+    }
+    
+    h3 {
+        margin: 10px;
+    }
+
+    #logo_webagency, #logo_webagency img {
+        max-width: 220px; /* Adaptation taille du logo du menu principal */
+    }
+    
+    .body_slide {
+        height: 350px; /* Adaptation taille du slider */
+    }
+    
+    #slider, .slide {
+        height: 450px; /* Adaptation taille du slider */
+    }
+    
+    .body_slide nav {
+        display: none; /* Suppression fonction navigation du slider */
+    }
+        
+    #services, #projets {
+    padding-top: 100px;
+    }
+    
+    #projets ul {
+        flex-direction: column; /* menu interne aux projets verticalisé */
+        width: 80%;
+        text-align: center;
+        margin: 0 auto; 
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    
+    #services img {
+        max-width: 440px;
+    }
+    
+    .services_description {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+}
+
+/* Diminution de la taille du menu fixe sur très petits écrans de smartphones */
+@media and all (max-width: 380px) {
+    header, .header_slide {
+        height: 60px;
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .has-header-image:not(.twentyseventeen-front-page):not(.home) .custom-header-media {
+        top: 100px;
+}
+}

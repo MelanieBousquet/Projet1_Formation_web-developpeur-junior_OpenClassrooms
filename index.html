@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8"> 
+    <meta name="description" content="WebAgency. Un site sur les services offerts par une agence web, sites, référencement, design, réseaux sociaux" />
+	<title>WebAgency : l'agence de tous vos projets !</title>
+    
+    <!-- Favicon sur différents devices -->
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="summary">
+    
+    <!-- FB Open Graph data -->
+    <meta property="og:title" content="WebAgency, l'agence de tous vos projets"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://www.webagency.com/"/>
+    <meta property="og:image" content="http://www.webagency.com/logo.png"/>
+    <meta property="og:description" content="WebAgency. Un site sur les services offerts par une agence web, sites, référencement, design, réseaux sociaux"/>
+    
+    <!-- Appel de la feuille de style, de la police, de fontawesome -->
+    <link rel="stylesheet" type="text/css" href="webagency.css">
+    <!--[if lte IE 9]><link rel="stylesheet" href="ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="ie8.css" /><![endif]-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/f0bc94619a.js"></script>   
+</head>
+
+<body>
+
+	<!--=====================Header=========================-->
+    
+	<header>
+		
+		<!--Logo-->
+        <div id="logo_webagency">
+            <a href="#slider"><img src="images/logo.png" alt="logo principal du site webagency"></a>
+        </div>
+		<!--Menu-->
+        <nav>
+            <input type="checkbox" id="nav" /><label for="nav"></label>
+            <ul>
+                <li><a class="active" href="#slider">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projets">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+		
+	</header>
+
+	<!--=====================Slider==========================-->
+    
+    <section id="slider">
+        
+        <!-- First slide -->
+        <div id="one" class="slide">
+            <div class="header_slide"></div>
+            <div class="body_slide">
+                <nav>
+                    <a class="prev" href="#two"><i class="fa fa-angle-left fa-2x" aria-hidden="true"></i></a>
+                    <a class="next" href="#two"><i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></a>
+                </nav>
+                <div class="text_slide">
+                    <h1><span>WEBAGENCY</span> : L'AGENCE DE TOUS VOS PROJETS !</h1>
+                    <p>Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>
+                    <p><a href="#services">Plus d'infos</a></p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Second slide -->
+        <div id="two" class="slide">
+            <div class="header_slide"></div>
+            <div class="body_slide">
+                <nav>
+                    <a class="prev" href="#one"><i class="fa fa-angle-left fa-2x" aria-hidden="true"></i></a>
+                    <a class="next" href="#one"><i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></a>
+                </nav>
+                <div class="text_slide">
+                    <h1><span>WEBAGENCY</span> : L'AGENCE DE TOUS VOS PROJETS !</h1>
+                    <p>Découvrez ici nos services et nos dernières réalisations</p>
+                    <p><a href="#services">Plus d'infos</a></p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+	<!--====================Services=========================-->
+    
+	<section id="services">
+		<div id="conteneur_services">
+			<!--Services header-->
+			<div class="section_header">
+				<h2>NOS SERVICES</h2>
+                <hr/>
+                <p>WebAgency crée et développe votre projet en alliant <strong>design et solutions techniques</strong>.<br/>Nous vous proposons <strong>des solutions sur-mesure</strong> qui s'adaptent spécifiquement à votre projet.</p>
+			</div>
+            <div id="services_body">
+                <!--Services img-->
+                <div>
+                    <img src="images/main-feature.png" alt="image décorative pr section services : un écran d'ordinateur">
+                </div>
+                <!--Services partie text-->
+                <div>
+                    <div class="services_description">
+                        <div class="services_logo">
+                            <div class="bulle_bleue"></div>
+						    <p class="fa_logo"><i class="fa fa-line-chart fa-lg" aria-hidden="true"></i></p>
+                        </div>
+                        <div class="services_text">
+                            <h3>UX design</h3>
+                            <p>Nous privilégions une approche <strong>centrée sur l'utilisateur</strong>. Nous étudions avec vous votre projet pour cibler vos besoins et le rendre accessible, ergonomique, et adaptatif (<strong>Responsive Web Design</strong>), afin d'affirmer votre présence sur tous les supports (ordinateur, tablette, smartphone).</p>
+                        </div>
+                    </div>
+                    <div class="services_description">
+                        <div class="services_logo">
+                            <div class="bulle_bleue"></div>
+		    				<p class="fa_logo"><i class="fa fa-cubes fa-lg"></i></p>
+                        </div>
+                        <div class="services_text">
+                            <h3>UI design</h3>
+                            <p>Nous créons <strong>l'identité visuelle</strong> de votre projet sur-mesure. Nous mettons en place selon vos souhaits une charte graphique pratique et intuitive de qualité, dans l'esprit de votre entreprise. </p>
+                        </div>
+                    </div>
+                    <div class="services_description">
+                        <div class="services_logo">
+                            <div class="bulle_bleue"></div>
+                            <p class="fa_logo"><i class="fa fa-pie-chart fa-lg" aria-hidden="true"></i></p>
+                        </div>
+    					<div class="services_text">
+                            <h3>SEO</h3>
+                            <p>Nous optimisons <strong>la visibilité</strong> de votre site auprès des internautes sur les recherches en rapport avec vos produits et services par <strong>le référencement naturel</strong>. Vous allez être populaire !</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>	
+	</section>
+
+	<!--====================Projets==========================-->
+    
+	<section id="projets">
+        <!-- Projets header -->
+		<div class="section_header">
+			<h2>NOS PROJETS</h2>
+            <hr/>
+			<p>Parcourez quelques exemples de nos dernières réalisations, découvrez nos expertises.<br/>Rejoignez-nous et faites partie de cet album !</p>
+		</div>
+        <!-- Menu de l'labum des projets -->
+		<nav>
+			<ul>
+				<li id="all_works">All Works</li>
+				<li id="creative">Creative</li>
+				<li id="corporate">Corporate</li>
+				<li id="portfolio" class="select">Portfolio</li>
+			</ul>
+		</nav>
+        <!-- Mise en place de l'album -->
+		<div class="projets_album">
+            <figure>
+                <img src="images/portfolio/01.jpg" alt="projet Creative item1">
+                <figcaption class="inactive creative">
+                    <p>Creative</p>
+                    <div>
+                        <p><i class="fa fa-eye" aria-hidden="true"></i></p>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="images/portfolio/02.jpg" alt="projet Creative item2">
+                <figcaption  class="inactive creative">
+                    <p>Creative</p>
+                    <div>
+                        <p><i class="fa fa-eye" aria-hidden="true"></i></p>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="images/portfolio/03.jpg" alt="projet Creative item3">
+                <figcaption  class="inactive creative">
+                    <p>Creative</p>
+                    <div>
+                        <p><i class="fa fa-eye" aria-hidden="true"></i></p>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="images/portfolio/04.jpg" alt="projet Corporate item1">
+                <figcaption  class="inactive corporate">
+                    <p>Corporate</p>
+                    <div>
+                        <p><i class="fa fa-eye" aria-hidden="true"></i></p>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="images/portfolio/05.jpg" alt="projet Corporate item2">
+                <figcaption  class="inactive corporate">
+                    <p>Corporate</p>
+                    <div>
+                        <p><i class="fa fa-eye" aria-hidden="true"></i></p>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="images/portfolio/06.jpg" alt="projet Portfolio item1">
+                <figcaption  class="portfolio">
+                    <p>Portfolio</p>
+                    <div>
+                        <p><i class="fa fa-eye" aria-hidden="true"></i></p>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="images/portfolio/07.jpg" alt="projet Portfolio item2">
+                <figcaption  class="portfolio">
+                    <p>Portfolio</p>
+                    <div>
+                        <p><i class="fa fa-eye" aria-hidden="true"></i></p>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="images/portfolio/08.jpg" alt="projet Portfolio item3">
+                <figcaption  class="portfolio">
+                    <p>Portfolio</p>
+                    <div>
+                        <p><i class="fa fa-eye" aria-hidden="true"></i></p>
+                    </div>
+                </figcaption>
+            </figure>
+		</div>
+	</section>
+
+	<!--====================Contact==========================-->
+    
+	<section id="contact">
+        <!-- Image de fond : image Google Maps de la localisation -->
+        <iframe class="google_maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5248.431204606119!2d2.3454415680663883!3d48.873166307519575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e145cb52f15%3A0x4d3ec41b2cadff0!2s25+Rue+d&#39;Hauteville%2C+75010+Paris!5e0!3m2!1sfr!2sfr!4v1484233326288" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <div id="conteneur_contact">
+             <form>
+                <h2>Nous Contacter</h2>
+                <p><span>WebAgency SAS</span><br/>25 rue d'Hauteville, 75010 PARIS<br/>Tél : 01 02 03 04 05</p>
+                <input type="text" name="name" placeholder="Nom"/>
+                <input type="text" name="email" placeholder="E-mail" />
+                <input type="text" name="subject"  placeholder="Sujet"/>
+                <textarea name="message" placeholder="Message"></textarea>
+                <p><a href="#" class="bouton" title="Envoyer votre message">Envoyer</a></p>
+            </form>  
+        </div>
+	</section>
+    
+    <!-- Appel de la librairie JQuery et du fichier js -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script src="webagency.js"></script>
+</body>
+</html>
